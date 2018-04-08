@@ -1,1 +1,14 @@
-
+.now {
+  overflow: hidden;
+  width: 10em;
+  position: relative;
+  appearance: none;
+  border: none;
+  color: white;
+  outline: none;
+  background: black;
+  box-sizing: border-box;
+  padding: 1em 1.5em;
+  border: 1px solid white;
+  border-radius: 0.5em;
+}
