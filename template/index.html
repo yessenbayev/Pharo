@@ -1,1 +1,16 @@
-
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/style.css"/>
+        <script type="text/javascript" src="{{ url_for('static',filename='scripts.js') }}"></script>	
+        <title>Value Proposition</title>
+	
+    </head>
+    
+    <body>
+        <p>Smart Bike Lock</p>
+        <button id='NOW' onclick="NOW">CLICK HERE NOW!!!</button>
+        {% block body %}
+        {% endblock %}     
+    </body>
+</html>
