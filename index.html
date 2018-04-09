@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/style.css"/>
+        <script type="text/javascript" src="{{ url_for('static',filename='scripts.js') }}"></script>	
+        <title>Landing page</title>
+	
+    </head>
+    
+    <body>
+        <p>Smart Bike Lock</p>
+        <button id='NOW' onclick="NOW">Click here to learn more</button>
+    
+    </body>
+	
+<form action="action_page.php">
+  <div class="container">
+    <h2>Subscribe to our Newsletter</h2>
+    <p>Sign up to become our beta customer!</p>
+  </div>
+
+  <div class="container" style="background-color:white">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Keep me updated!
+    </label>
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Subscribe">
+  </div>
+</form>
+
+</html>
