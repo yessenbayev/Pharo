@@ -7,6 +7,18 @@ form {
     padding: 20px;
     background-color: #f1f1f1;
 }
+#smart {
+    font-size: 50px;
+    color: #008000;
+    font-style: Times New Roman;
+    text-transform: uppercase;
+    text-align: center;
+}
+#click {
+    color: maroon;
+    text-align: center;
+    margin-left: 45%;
+}
 
 /* Style the input elements and the submit button */
 input[type=text], input[type=submit] {
