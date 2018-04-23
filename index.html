@@ -6,6 +6,53 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#hello{
+  text-align: center;
+  font-size: 20px;
+}
+</style>
+
+
+
 <body id="myPage">
 
 <!-- Navbar -->
@@ -32,30 +79,8 @@
 <div class="w3-display-container w3-animate-opacity">
   <img src="Main2.jpg" alt="bike" style="width:100%;min-height:350px;max-height:650px;">
   </div>
-
-  <!-- <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">LEARN W3.CSS</button>
-  </div> -->
 </div>
 
-<!-- Modal -->
-<!-- <div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card-4 w3-animate-top">
-    <header class="w3-container w3-teal w3-display-container"> 
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
-      <h4>Oh snap! We just showed you a modal..</h4>
-      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-    </header>
-    <div class="w3-container">
-      <p>Cool huh? Ok, enough teasing around..</p>
-      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
-    </div>
-    <footer class="w3-container w3-teal">
-      <p>Modal footer</p>
-    </footer>
-  </div>
-</div>
- -->
 <!-- Team Container -->
 <div class="w3-container w3-padding-64 w3-center" id="team">
 <h2>OUR TEAM</h2>
@@ -104,48 +129,42 @@
 <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
 
 <div class="w3-quarter">
-<h2>Our Work</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2 style="text-align: center">Our Lock</h2>
+<p style="text-align:center">Simple. Convient. Innovative.</p>
+<p> Pharo combines convience, simplicity, and security into an easy attachable lock. With simple installation and easy to use app, Pharo is the new lock everyone will be using, so the be the first!</p> 
 </div>
 
 <div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="/w3images/fjords.jpg" alt="Vernazza" style="width:100%">
+<div class="w3-card w3-white" style="height:350px; ">
+  <img src="App.png" alt="App" style="width:100%; height:175px;">
   <div class="w3-container">
-  <h3>Customer 1</h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  </div>
-  </div>
-</div>
+  <h3>Easy to Use App</h3>
 
-<div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="/w3images/lights.jpg" alt="Cinque Terre" style="width:100%">
-  <div class="w3-container">
-  <h3>Customer 2</h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
+  <p>Our easy to use app allows you to unlock and lock your bike with a simple touch of a button. So no more keys!<p>
+
   </div>
   </div>
 </div>
 
 <div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="/w3images/mountains.jpg" alt="Monterosso" style="width:100%">
+<div class="w3-card w3-white" style="height:350px; ">
+  <img src="GPS.jpg" alt="GPS" style="width:100%; height:175px;">
   <div class="w3-container">
-  <h3>Customer 3</h3>
-  <h4>Trade</h4>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
-  <p>Blablabla</p>
+  <h3>GPS Tracking</h3>
+
+  <p>For the extra security on your bike, our lock comes with a GPS Tracker that you can conviently see in your app!</p>
+ 
+    </div>
+</div>
+</div>
+<div class="w3-quarter">
+<div class="w3-card w3-white" style="height:350px; ">
+  <img src="Easy.png" alt="Easy to Install" style="width:100%; height:175px;">
+  <div class="w3-container">
+  <h3>Easy to Install</h3>
+
+  <p>Our lock can be easibly intalled without leaving a single scratch on your bike! </p>
+
   </div>
   </div>
 </div>
@@ -154,40 +173,30 @@
 
 <!-- About Us -->
 <div class="w3-container" style="padding:60px 16px" id="pricing">
-  <h3 class="w3-center">RAVE</h3>
-  <p class="w3-center w3-large">What is a Rave?</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-  <div class= "w3-col 13 m6 w3-margin bottom">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/zH9sXggRlxc" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <div class="one-half column">
+  <h3 class="w3-center">About Us</h3>
+  <div class="w3-row">
+ <div class="w3-half" style="padding:10px 16px">
+   <h3 class="w3-center">Our Mission</h3>
   <p>What is a Rave? A rave is a huge concert featuring performances by DJs. These DJs play continuous electronic dance music which incldudes both songs and tracks. Usually at these raves, there is also a seamless flow 
 of flashing lights and fog. Some raves are held at night clubs; however, over the years, raves have expanded over the years to huge concert venues. Just like Cochella, these raves are becoming more and more popular and extend over multiple days. Some of these big raves include EDC, Ultra, and Tomorrowland. </p>
-  
-  <p>To the left is a song by Martin Garrix, a professional EDM DJ. <p>
-  
-  <p>Here is a EDM track I created: <p>
-  <div>
-  <audio controls>
-  <source src="ItsLit.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
   </div>
- </div>
+  <div class="w3-half" style="padding:10px 16px">
+   <h3 class="w3-center">Our Business Model</h3>
+   <input type="button" value = "Click me to find out our business model!" onclick="pop()">
+      <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id=hello> </p>
+    </div>
+  </div>
+  <div>
+</div>
+
 </div> 
   
 <!-- Contact Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
   <div class="w3-row">
-    <div class="w3-col m5">
-    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
-      <h3>Address</h3>
-      <p>Swing by for a cup of coffee, or whatever.</p>
-      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
-      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
-      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
-    </div>
-    <div class="w3-col m7">
       <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
       <div class="w3-section">      
         <label>Name</label>
@@ -197,15 +206,8 @@ Your browser does not support the audio element.
         <label>Email</label>
         <input class="w3-input" type="text" name="Email" required>
       </div>
-      <div class="w3-section">      
-        <label>Message</label>
-        <input class="w3-input" type="text" name="Message" required>
-      </div>  
-      <input class="w3-check" type="checkbox" checked name="Like">
-      <label>I Like it!</label>
       <button type="submit" class="w3-button w3-right w3-theme">Send</button>
       </form>
-    </div>
   </div>
 </div>
 
@@ -218,7 +220,7 @@ Your browser does not support the audio element.
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
   <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p>Powered by PHARO Inc.</p>
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
     <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
@@ -228,6 +230,18 @@ Your browser does not support the audio element.
 </footer>
 
 <script>
+function pop(){
+    var modal = document.getElementById('myModal');
+    document.getElementById('hello').innerHTML="LOOK AT ME! It is too HOT for me! GET ME OUT OF HERE!";
+    modal.style.display = "block";
+    }   
+
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+  }
 // Script for side navigation
 function w3_open() {
     var x = document.getElementById("mySidebar");
@@ -250,6 +264,7 @@ function openNav() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
 </script>
 
 </body>
