@@ -68,27 +68,6 @@ def layout():
         return render_template('extend.html')
 
 
-# @app.route('/')
-# def GET_layout():
-#     return render_template('landing.html')
-# @app.route('/main')
-# def GET_main():
-#     return render_template('main.html')
-# @app.route('/product')
-# def GET_product():
-#     return render_template('product.html')
-# @app.route('/people')
-# def GET_people():
-#     return render_template('people.html')
-# @app.route('/pin')
-# def GET_pin():
-#     return render_template('pin.html')
-# @app.route('/about')
-# def GET_about():
-#     return render_template('about.html')
-# @app.route('/login')
-# def GET_login():
-#     return render_template('login.html')
 
 # @app.route('/signup', methods=['GET','POST']) #to differentiate between the two commands 
 # def GET_signup():
@@ -127,3 +106,4 @@ if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
+
