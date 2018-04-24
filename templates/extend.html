@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-<title>Pharo</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="index.css">
+{% extends "index.html" %}
 
-
-<body id="myPage">
-
+    {% block body %}
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
@@ -33,7 +23,7 @@
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
-  <img src="Main2.jpg" alt="bike" style="width:100%;min-height:350px;max-height:650px;">
+  <img src="../static/Main2.jpg" alt="bike" style="width:100%;min-height:350px;max-height:650px;">
   </div>
 </div>
 
@@ -45,20 +35,20 @@
 <div class="w3-row"><br>
 
 <div class="w3-third">
-  <img src="Alan.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="../static/Alan.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Alan Yessenbayev</h3>
   <p>Electrical Engineer</p>
 </div>
 
 
 <div class="w3-third">
-  <img src="Alex.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="../static/Alex.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Alexandra Hernandex</h3>
   <p>Designer and App Developer</p>
 </div>
 
 <div class="w3-third">
-  <img src="Jerry.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="../static/Jerry.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Jerry Yihui Yang</h3>
   <p>Electrical Engineer</p>
 </div>
@@ -67,13 +57,13 @@
 <div class="w3-row"><br>
 
 <div class="w3-half">
-  <img src="Justin.jpg" alt="Boss" style="width:35%" class="w3-circle w3-hover-opacity">
+  <img src="../static/Justin.jpg" alt="Boss" style="width:35%" class="w3-circle w3-hover-opacity">
   <h3>Justin Tran</h3>
   <p>Website and Server Developer</p>
 </div>
 
 <div class="w3-half">
-  <img src="Ahnaf.jpg" alt="Boss" style="width:35%" class="w3-circle w3-hover-opacity">
+  <img src="../static/Ahnaf.jpg" alt="Boss" style="width:35%" class="w3-circle w3-hover-opacity">
   <h3>Ahnaf Ahmed</h3>
   <p>Marketer and Electrical Engineer</p>
 </div>
@@ -94,7 +84,7 @@
 
 <div class="w3-quarter">
 <div class="w3-card w3-white" style="height:350px; ">
-  <img src="App.png" alt="App" style="width:100%; height:175px;">
+  <img src="../static/App.png" alt="App" style="width:100%; height:175px;">
   <div class="w3-container">
   <h3>Easy to Use App</h3>
 
@@ -106,7 +96,7 @@
 
 <div class="w3-quarter">
 <div class="w3-card w3-white" style="height:350px; ">
-  <img src="GPS.jpg" alt="GPS" style="width:100%; height:175px;">
+  <img src="../static/GPS.jpg" alt="GPS" style="width:100%; height:175px;">
   <div class="w3-container">
   <h3>GPS Tracking</h3>
 
@@ -117,7 +107,7 @@
 </div>
 <div class="w3-quarter">
 <div class="w3-card w3-white" style="height:350px; ">
-  <img src="Easy.png" alt="Easy to Install" style="width:100%; height:175px;">
+  <img src="../static/Easy.png" alt="Easy to Install" style="width:100%; height:175px;">
   <div class="w3-container">
   <h3>Easy to Install</h3>
 
@@ -190,7 +180,8 @@
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
-<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="../static/index.js"></script>
 
-</body>
-</html>
+
+
+    {% endblock %}
