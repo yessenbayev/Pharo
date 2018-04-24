@@ -68,7 +68,7 @@ def layout():
         return render_template('extend.html')
 
 @app.route('/postmethod', methods = ['POST'])
- def get_post_javascript_data():
+def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
     return render_template('home.html')
