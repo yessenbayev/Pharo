@@ -67,7 +67,13 @@ app = Flask(__name__)
 def layout():
         return render_template('extend.html')
 
+@app.route('/postmethod', methods = ['POST'])
+ def get_post_javascript_data():
+    name = request.form['jsName']
+    email = request.form['jsEmail']
+    return render_template('home.html')
 
+  
 
 # @app.route('/signup', methods=['GET','POST']) #to differentiate between the two commands 
 # def GET_signup():
