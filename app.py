@@ -21,8 +21,8 @@ app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=587,
     MAIL_USE_SSL=465,
-    MAIL_USERNAME = 'justintran1997@gmail.com',
-    MAIL_PASSWORD = '311970000'
+    MAIL_USERNAME = 'pharo.ucsd@gmail.com',
+    MAIL_PASSWORD = 'ece140pharo'
     )
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pharo'
 heroku = Heroku(app)
