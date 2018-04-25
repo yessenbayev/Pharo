@@ -96,11 +96,11 @@ class Emails(db.Model):
 def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
-    print(name)
+    print("Sent to ",email)
     reg = Emails(name,email)
     db.session.add(reg)
     db.session.commit()
-    msg = Message("Hello bitches", sender="pharo.ucsd@gmail.com", recipients=["jtt049@ucsd.edu"])
+    msg = Message("Hello bitches", sender="pharo.ucsd@gmail.com", recipients=[email])
     mail.send(msg)
     return render_template('extend.html')
 
