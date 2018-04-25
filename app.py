@@ -1,5 +1,7 @@
 import os
 from flask import Flask, render_template, g, request, redirect, jsonify
+from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.heroku import Heroku
 from flask_mail import Mail
 from flask_mail import Message
 import smtplib
@@ -22,8 +24,21 @@ app.config.update(
     MAIL_USERNAME = 'justintran1997@gmail.com',
     MAIL_PASSWORD = '311970000'
     )
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pharo'
+heroku = Heroku(app)
+db = SQLAlchemy(app)
 mail = Mail(app)
 # ##### DB SETUP #####
+
+class Emails(db.Model):
+	__tablename__ = "emails"
+	id = db.Column(db.Integer, primary_key=True)
+	name = db.Column(db.String(120),unique=False)
+	email = db.Column(db.String(120),unique=True)
+
+	def __init__(self, name, email):
+            self.name = name
+            self.email = email
 
 # # Setup the database credentials
 # app.config.update(dict(
@@ -84,18 +99,20 @@ def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
     print(name)
+    reg = Emails(name,email)
+    db.session.add(reg)
+    db.session.commit()
+    msg = Message("Hello bitches", sender="yiy116@ucsd.edu", recipients=["jtt049@ucsd.edu"])
+    mail.send(msg)
     return render_template('extend.html')
 
 @app.route("/")
 def index():
-    
-    msg = Message("Hello bitches", sender="justintran1997@gmail.com", recipients=["jtt049@ucsd.edu"])
-    #mail.send(msg)
-
     return render_template('extend.html')
-  
 
-# @app.route('/signup', methods=['GET','POST']) #to differentiate between the two commands 
+
+
+# @app.route('/signup', methods=['GET','POST']) #to differentiate between the two commands
 # def GET_signup():
 #     if (request.method == 'GET'):
 #         return render_template('signup.html')
@@ -109,10 +126,10 @@ def index():
 
 #         elif '@' not in email:
 #             return render_template('signup.html', error_msg='Please fill valid email address')
-            
+
 #         elif not email[-1].isalpha():
 #             return render_template('signup.html', error_msg='Please fill valid email address')
-            
+
 #         else :
 #             db = get_db()
 #             db.execute('insert into Data (first_name, last_name, email) values (?, ?, ?)',
@@ -132,4 +149,3 @@ if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-
