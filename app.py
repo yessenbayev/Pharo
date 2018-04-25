@@ -100,9 +100,10 @@ def get_post_javascript_data():
     reg = Emails(name,email)
     db.session.add(reg)
     db.session.commit()
-    msg = Message("Hello bitches", sender="pharo.ucsd@gmail.com", recipients=[email])
+    bd = "Dear Customers,\nThank you so much for signing up for the Pharo newsletter! As we work towards finishing our product, we will be sharing updates with you.\nThank so much for your support once again!\n\nBest Regards,\nTeam Pharo"
+    msg = Message("Welcome to Pharo", body=bd, sender="pharo.ucsd@gmail.com", recipients=[email])
     mail.send(msg)
-    return render_template('extend.html')
+    return None
 
 @app.route("/")
 def index():
