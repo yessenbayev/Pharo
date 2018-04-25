@@ -91,7 +91,7 @@ def get_post_javascript_data():
     reg = Emails(name,email)
     db.session.add(reg)
     db.session.commit()
-    msg = Message("Hello bitches", sender="yiy116@ucsd.edu", recipients=["jtt049@ucsd.edu"])
+    msg = Message("Hello bitches", sender="pharo.ucsd@gmail.com", recipients=["jtt049@ucsd.edu"])
     mail.send(msg)
     return render_template('extend.html')
 
