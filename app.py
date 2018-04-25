@@ -5,7 +5,6 @@ from flask.ext.heroku import Heroku
 from flask_mail import Mail
 from flask_mail import Message
 import smtplib
-# from sqlite3 import dbapi2 as sqlite3
 
 # def dict_factory(cursor, row):
 #     d = {}
