@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, g, request, redirect, jsonify
-
+from flask_mail import Mail
+from flask_mail import Message
 # from sqlite3 import dbapi2 as sqlite3
 
 # def dict_factory(cursor, row):
@@ -9,8 +10,9 @@ from flask import Flask, render_template, g, request, redirect, jsonify
 #       d[col[0]] = row[idx]
 #     return d
 
-#
+# ##### APP SETUP #####
 app = Flask(__name__)
+mail = Mail(app)
 # ##### DB SETUP #####
 
 # # Setup the database credentials
@@ -72,6 +74,10 @@ def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
     print(name)
+
+     msg = Message("Hello",
+                  sender="jtt049@ucsd.edu",
+                  recipients=[email])
     return render_template('extend.html')
 
   
