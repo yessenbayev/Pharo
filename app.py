@@ -88,8 +88,10 @@ def get_post_javascript_data():
 
 @app.route("/")
 def index():
+    
     msg = Message("Hello bitches", sender="justintran1997@gmail.com", recipients=["jtt049@ucsd.edu"])
-    mail.send(msg)
+    #mail.send(msg)
+
     return render_template('extend.html')
   
 
