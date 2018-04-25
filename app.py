@@ -4,6 +4,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.heroku import Heroku
 from flask_mail import Mail
 from flask_mail import Message
+import smtplib
 # from sqlite3 import dbapi2 as sqlite3
 
 # def dict_factory(cursor, row):
@@ -14,6 +15,15 @@ from flask_mail import Message
 
 # ##### APP SETUP #####
 app = Flask(__name__)
+app.config.update(
+    DEBUG=True,
+    #EMAIL SETTINGS
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT=587,
+    MAIL_USE_SSL=465,
+    MAIL_USERNAME = 'justintran1997@gmail.com',
+    MAIL_PASSWORD = '311970000'
+    )
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pharo'
 heroku = Heroku(app)
 db = SQLAlchemy(app)
@@ -88,6 +98,7 @@ class Emails(db.Model):
 def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
+    print(name)
     reg = Emails(name,email)
     db.session.add(reg)
     db.session.commit()
