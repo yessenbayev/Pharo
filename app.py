@@ -1,5 +1,7 @@
 import os
 from flask import Flask, render_template, g, request, redirect, jsonify
+from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.heroku import Heroku
 
 # from sqlite3 import dbapi2 as sqlite3
 
@@ -11,7 +13,20 @@ from flask import Flask, render_template, g, request, redirect, jsonify
 
 #
 app = Flask(__name__)
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pharo'
+heroku = Heroku(app)
+db = SQLAlchemy(app)
 # ##### DB SETUP #####
+
+class Emails(db.Model):
+    __tablename__ = "emails"
+    id = db.Column(db.Integer, primary_key=True)
+	name = db.Column(db.String(120), unique=False)
+    email = db.Column(db.String(120), unique=True)
+
+    def __init__(self, name, email):
+		self.name = name
+        self.email = email
 
 # # Setup the database credentials
 # app.config.update(dict(
@@ -72,11 +87,14 @@ def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
     print(name)
+	reg = Emails(name,email)
+	db.session.add(reg)
+    db.session.commit()
     return render_template('extend.html')
 
-  
 
-# @app.route('/signup', methods=['GET','POST']) #to differentiate between the two commands 
+
+# @app.route('/signup', methods=['GET','POST']) #to differentiate between the two commands
 # def GET_signup():
 #     if (request.method == 'GET'):
 #         return render_template('signup.html')
@@ -90,10 +108,10 @@ def get_post_javascript_data():
 
 #         elif '@' not in email:
 #             return render_template('signup.html', error_msg='Please fill valid email address')
-            
+
 #         elif not email[-1].isalpha():
 #             return render_template('signup.html', error_msg='Please fill valid email address')
-            
+
 #         else :
 #             db = get_db()
 #             db.execute('insert into Data (first_name, last_name, email) values (?, ?, ?)',
@@ -113,4 +131,3 @@ if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-
