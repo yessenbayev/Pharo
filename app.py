@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, g, request, redirect, jsonify
 from flask_mail import Mail
 from flask_mail import Message
+import smtplib
 # from sqlite3 import dbapi2 as sqlite3
 
 # def dict_factory(cursor, row):
@@ -12,6 +13,15 @@ from flask_mail import Message
 
 # ##### APP SETUP #####
 app = Flask(__name__)
+app.config.update(
+    DEBUG=True,
+    #EMAIL SETTINGS
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT=587,
+    MAIL_USE_SSL=465,
+    MAIL_USERNAME = 'justintran1997@gmail.com',
+    MAIL_PASSWORD = '311970000'
+    )
 mail = Mail(app)
 # ##### DB SETUP #####
 
@@ -74,12 +84,11 @@ def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
     print(name)
-
     return render_template('extend.html')
 
 @app.route("/")
 def index():
-    msg = Message("Hello bitches", sender="yiy116@ucsd.edu", recipients=["jtt049@ucsd.edu"])
+    msg = Message("Hello bitches", sender="justintran1997@gmail.com", recipients=["jtt049@ucsd.edu"])
     mail.send(msg)
     return render_template('extend.html')
   
