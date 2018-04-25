@@ -2,7 +2,8 @@ import os
 from flask import Flask, render_template, g, request, redirect, jsonify
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.heroku import Heroku
-
+from flask_mail import Mail
+from flask_mail import Message
 # from sqlite3 import dbapi2 as sqlite3
 
 # def dict_factory(cursor, row):
@@ -11,11 +12,12 @@ from flask.ext.heroku import Heroku
 #       d[col[0]] = row[idx]
 #     return d
 
-#
+# ##### APP SETUP #####
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pharo'
 heroku = Heroku(app)
 db = SQLAlchemy(app)
+mail = Mail(app)
 # ##### DB SETUP #####
 
 class Emails(db.Model):
@@ -78,9 +80,9 @@ class Emails(db.Model):
 
 ##### ROUTES #####
 
-@app.route('/')
-def layout():
-	return render_template('extend.html')
+#@app.route('/')
+#def layout():
+#	return render_template('extend.html')
 
 @app.route('/postmethod', methods = ['POST'])
 def get_post_javascript_data():
@@ -89,6 +91,12 @@ def get_post_javascript_data():
     reg = Emails(name,email)
     db.session.add(reg)
     db.session.commit()
+	msg = Message("Hello bitches", sender="yiy116@ucsd.edu", recipients=["jtt049@ucsd.edu"])
+	mail.send(msg)
+    return render_template('extend.html')
+
+@app.route("/")
+def index():
     return render_template('extend.html')
 
 
