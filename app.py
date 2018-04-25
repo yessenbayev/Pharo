@@ -65,9 +65,9 @@ mail = Mail(app)
 
 ##### ROUTES #####
 
-@app.route('/')
-def layout():
-	return render_template('extend.html')
+#@app.route('/')
+#def layout():
+#	return render_template('extend.html')
 
 @app.route('/postmethod', methods = ['POST'])
 def get_post_javascript_data():
@@ -75,11 +75,13 @@ def get_post_javascript_data():
     email = request.form['jsEmail']
     print(name)
 
-     msg = Message("Hello",
-                  sender="jtt049@ucsd.edu",
-                  recipients=[email])
     return render_template('extend.html')
 
+@app.route("/")
+def index():
+    msg = Message("Hello bitches", sender="yiy116@ucsd.edu", recipients=["jtt049@ucsd.edu"])
+    mail.send(msg)
+    return render_template('extend.html')
   
 
 # @app.route('/signup', methods=['GET','POST']) #to differentiate between the two commands 
