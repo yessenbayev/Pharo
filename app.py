@@ -25,8 +25,8 @@ class Emails(db.Model):
 	email = db.Column(db.String(120),unique=True)
 
 	def __init__(self, name, email):
-		self.name = name
-        self.email = email
+            self.name = name
+            self.email = email
 
 # # Setup the database credentials
 # app.config.update(dict(
@@ -86,9 +86,8 @@ def layout():
 def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
-    print(name)
-	reg = Emails(name,email)
-	db.session.add(reg)
+    reg = Emails(name,email)
+    db.session.add(reg)
     db.session.commit()
     return render_template('extend.html')
 
