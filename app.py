@@ -18,8 +18,8 @@ app.config.update(
     DEBUG=True,
     #EMAIL SETTINGS
     MAIL_SERVER='smtp.gmail.com',
-    MAIL_PORT=587,
-    MAIL_USE_SSL=465,
+    MAIL_PORT=465,
+    MAIL_USE_SSL=True,
     MAIL_USERNAME = 'pharo.ucsd@gmail.com',
     MAIL_PASSWORD = 'ece140pharo'
     )
