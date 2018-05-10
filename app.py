@@ -12,7 +12,7 @@ import smtplib
 #       d[col[0]] = row[idx]
 #     return d
 
-# ##### APP SETUP #####
+##### APP SETUP #####
 app = Flask(__name__)
 app.config.update(
     DEBUG=True,

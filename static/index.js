@@ -32,5 +32,76 @@ function openNav() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+$(document).ready(function(){
+    $('#toggle').click(function(){
+        var number = $(this).val();
+        if (number==0){
+            $(this).val(1);
+            $('.w3-card').css('height',420);
+            $('.mission').css('height',250);
 
+            $('*').each(function(){
+            $(this).css('font-size',16);  
+            });
+        }
+        else{
+            $(this).val(0);
+            $('.w3-card').css('height',550);
+             $('.mission').css('height',350);
+            $('*').each(function(){ 
+            $(this).css('font-size',20);  
+        }); 
+           
+     }
+     }); 
+
+  $('#inverter').click(function(){
+        var number = $(this).val();
+        if (number==1){
+            $(this).val(0);
+            $('body').css('background-color','black');
+            $('body').css('filter','invert(100%)');
+        }
+        else{
+            $(this).val(1);
+            $('body').css('background-color','white');
+            $('body').css('filter','invert(0%)');
+    
+           
+     }
+     }); 
+
+       // $('*').each(function(){
+       // var k =  parseInt($(this).css('font-size')); 
+       // var redSize = ((k*110)/100) ; //here, you can give the percentage( now it is reduced to 90%)
+       //     $(this).css('font-size',redSize);  
+
+       // });
+       // $(#w3-card).(function(){
+       //       $(this).css('min-height',800);
+       // }); 
+
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 
