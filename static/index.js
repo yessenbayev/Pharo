@@ -50,7 +50,7 @@ $(document).ready(function(){
              $('.mission').css('height',350);
             $('*').each(function(){ 
             // var size=parseInt($(this).css('font-size'));
-            $(this).css('font-size', 20);  
+            $(this).css('font-size', 19);  
         }); 
            
      }
@@ -76,14 +76,17 @@ $(document).ready(function(){
   $("#Submit").click(function(){
         var name = $('#Name').val();
         var email = $('#Email').val();
+
         $.post("/postmethod", {
              jsName: name,
              jsEmail: email
-             },function(){
-                 alert("Success: Your name is: "+name+ " and your email is " + email); 
+             },
+             function(){
+                 return 0; 
          });
+
     });
-});
+
        // $('*').each(function(){
        // var k =  parseInt($(this).css('font-size')); 
        // var redSize = ((k*110)/100) ; //here, you can give the percentage( now it is reduced to 90%)
@@ -116,5 +119,5 @@ $(document).ready(function(){
       });
     } // End if
   });
-});
+  });
 

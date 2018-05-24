@@ -96,6 +96,8 @@ class Emails(db.Model):
 def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
+    print(name)
+    print(email)
     print("Sent to ",email)
     reg = Emails(name,email)
     db.session.add(reg)
@@ -103,7 +105,7 @@ def get_post_javascript_data():
     bd = "Dear Customers,\nThank you so much for signing up for the Pharo newsletter! As we work towards finishing our product, we will be sharing updates with you.\nThank so much for your support once again!\n\nBest Regards,\nTeam Pharo"
     msg = Message("Welcome to Pharo", body=bd, sender="pharo.ucsd@gmail.com", recipients=[email])
     mail.send(msg)
-    return None
+    return render_template('Thankyou.html')
 
 @app.route("/")
 def index():
@@ -112,7 +114,6 @@ def index():
 @app.route("/CompetitiveAdvantage/")
 def stuff():
     return render_template('CompetitiveAdvantage.html')
-
 
 
 # @app.route('/signup', methods=['GET','POST']) #to differentiate between the two commands
