@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, g, request, redirect, jsonify
-from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.heroku import Heroku
+from flask_sqlalchemy import SQLAlchemy
+from flask_heroku import Heroku
 from flask_mail import Mail
 from flask_mail import Message
 import smtplib
