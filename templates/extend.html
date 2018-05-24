@@ -1,19 +1,42 @@
 {% extends "index.html" %}
 
     {% block body %}
-<!-- Navbar -->
 <div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-black"><i class="fa fa-home w3-margin-right"></i>PHARO</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a>
-  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Lock</a>
-   <a href="#CA" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Competitive Analysis</a>
-  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Subscribe to our newsletter</a>
+ <div class="w3-bar w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="/#" class="w3-bar-item w3-button"><i class="fa fa-home w3-margin-right"></i>PHARO</a>
+  <a href="/#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Lock</a>
+   <a href="/CompetitiveAdvantage" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Competitive Analysis</a>
+  <a href="/#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
+    <a href="/#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a>
+  <a href="/#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Subscribe to our newsletter</a>
   <div class="w3-dropdown-hover">
-    <button class="w3-button w3-black">Accessibility</button>
-    <div class="w3-dropdown-content w3-bar-block w3-border" style="background-color: black;">
+    <button class="w3-button">Accessibility</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <p style="color: black; margin: 0px 0px;">Font Size</p>
+      <label class="switch">
+      <input type="checkbox" id= "toggle" value ="1">
+      <span class="slider round"></span></label>
+    <br>
+    <p style="color: black; margin: 0px 0px;">Color Inverter</p>
+    <label class="switch">
+      <input type="checkbox" id= "inverter" value ="1">
+      <span class="slider round"></span></label>
+    </div>
+  </div>
+</label>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-l5 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#work" class="w3-bar-item w3-button">Our Lock</a>
+     <a href="/CompetitveAdvantage" class="w3-bar-item w3-button">Competitive Analysis</a>
+    <a href="#pricing" class="w3-bar-item w3-button">About Us</a>
+    <a href="#team" class="w3-bar-item w3-button">Our Team</a>
+    <a href="#contact" class="w3-bar-item w3-button">Subscribe to our newsletter</a>
+    <div class="w3-dropdown-hover">
+    <button class="w3-button w3-theme-l5">Accessibility</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
       <p style="color: white; margin: 0px 0px;">Font Size</p>
       <label class="switch">
       <input type="checkbox" id= "toggle" value ="1">
@@ -24,21 +47,10 @@
       <input type="checkbox" id= "inverter" value ="1">
       <span class="slider round"></span></label>
     </div>
-  </div>
-
-</label>
- </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#team" class="w3-bar-item w3-button">Our Team</a>
-    <a href="#work" class="w3-bar-item w3-button">Our Lock</a>
-     <a href="#CA" class="w3-bar-item w3-button">Competitive Analysis</a>
-    <a href="#pricing" class="w3-bar-item w3-button">About Us</a>
-    <a href="#contact" class="w3-bar-item w3-button">Subscribe to our newsletter</a>
     </div>
   </div>
 </div>
+
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
@@ -47,57 +59,15 @@
 </div>
 
 <!-- Team Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
-<h2><b>OUR TEAM</b></h2>
-<p>Meet the team:</p>
-
-<div class="w3-row"><br>
-
-<div class="w3-third">
-  <img src="../static/Alan.jpg" alt="Alan Yessenbayev: Systems Engineer" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Alan Yessenbayev</h3>
-  <p>Systems Engineer</p>
-</div>
-
-
-<div class="w3-third">
-  <img src="../static/Alex.jpg" alt="Alexandra Hernandez: Designer and App Developer" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Alexandra Hernandez</h3>
-  <p>Designer and App Developer</p>
-</div>
-
-<div class="w3-third">
-  <img src="../static/Jerry.jpg" alt="Jerry Yihui Yang: Hardware and Mechanical Engineer" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Jerry Yihui Yang</h3>
-  <p>Hardware and Mechanical Engineer</p>
-</div>
-
-</div>
-<div class="w3-row"><br>
-
-<div class="w3-half">
-  <img src="../static/Justin.jpg" alt="Justin Tran: Website and Server Developer" style="width:35%" class="w3-circle w3-hover-opacity">
-  <h3>Justin Tran</h3>
-  <p>Website and Server Developer</p>
-</div>
-
-<div class="w3-half">
-  <img src="../static/Ahnaf.jpg" alt="Ahnaf Ahmed: Product Manager" style="width:35%" class="w3-circle w3-hover-opacity">
-  <h3>Ahnaf Ahmed</h3>
-  <p>Product Manager</p>
-</div>
-
-</div>
-</div>
 
 <!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+<div class="w3-row-padding w3-padding-64" style="background-color: #0d9191;" id="work">
 
 <div class="w3-quarter">
 
-<h2 style="text-align: center">Our Lock</h2>
-<p style="text-align:center">Convenient. Intuitive. Secure.</p>
-<p> Pharo combines convience, simplicity and security into an easy attachable lock. With quick installation and complimentary app, Pharo is the smart lock of the future! Preorder today!</p>
+<h2 style="text-align: center; color: white; ">Our Lock</h2>
+<p style="text-align:center; color: white; ">Convenient. Intuitive. Secure.</p>
+<p style="color: white;"> Pharo combines convience, simplicity and security into an easy attachable lock. With quick installation and complimentary app, Pharo is the smart lock of the future! Preorder today!</p>
 
 </div>
 
@@ -140,166 +110,6 @@
 
 
 <!-- Competitive Analysis -->
-<div class="w3-row-padding" style="padding:20px 16px" id="CA">
-
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-th {
-    border: 0.8px solid #dddddd;
-    text-align: left;
-    padding: 5px;
-    font-size: 20px; 
-}
-
-
-td {
-    border: 0.8px solid #dddddd;
-    text-align: left;
-    padding: 5px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-</style>
-
-
-<h2 class="w3-center"><b>Competitive Analysis</b></h2>
-
-<table>
-  <tr>
-    <th>Factors</th>
-    <th>Pharo</th>
-    <th>Linka</th>
-    <th>U-Lock</th>
-    <th>Chain Lock</th>
-  </tr>
-  <tr>
-    <td><b>Security</b></td>
-    <td>High</td>
-    <td>Medium</td>
-    <td>High</td>
-    <td>Medium</td>
-  </tr>
-  <tr>
-    <td><b>Convenience</b></td>
-    <td>High</td>
-    <td>High</td>
-    <td>Low</td>
-    <td>Medium</td>
-  </tr>
-  <tr>
-    <td><b>Autonomous</b> </td>
-    <td>Yes</td>
-    <td>Yes</td>
-    <td>No</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><b> Price</b></td>
-    <td>$70</td>
-    <td>$200</td>
-    <td>$50</td>
-    <td>$30</td>
-  </tr>
-  <tr>
-    <td><b>Phone App</b></td>
-    <td>IOS and Android</td>
-    <td>IOS and Android</td>
-    <td>No</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td><b>GPS Tracking</b></td>
-    <td>Yes</td>
-    <td>No</td>
-    <td>No</td>
-    <td>No</td>
-  </tr>
-    <tr>
-    <td><b>Alarm</b></td>
-    <td>Sounds/Lights</td>
-    <td>Sounds</td>
-    <td>No</td>
-    <td>No</td>
-  </tr>
-      <tr>
-    <td><b>Transportation</b></td>
-    <td>Attached</td>
-    <td>Attached</td>
-    <td>Carried with</td>
-    <td>Carried with</td>
-  </tr>
-      <tr>
-    <td><b>Length</b></td>
-    <td>Long</td>
-    <td>N/A</td>
-    <td>Short</td>
-    <td>Medium</td>
-  </tr>
-      <tr>
-    <td><b>Weight</b></td>
-    <td>Light</td>
-    <td>Light</td>
-    <td>Heavy</td>
-    <td>Heavy</td>
-  </tr>
-</table>
-
-
-<div class="w3-row">
-<div class="w3-half">
-
-<b><p style="text-align: center;">Strengths</p></b>
-<ul>
-  <li>The best combination of security, convenience and price</li>
-  <li>Autonomous locking and unlocking mechanism</li>
-  <li>Theft Security
-    <ul>
-    <li>Mobile notification of potential threat</li>
-    <li>GPS tracking when bike moves</li>
-    <li>Sound alarm and flashing lights on bike</li>
-    </ul>
-  </li>
-  </ul>
-</div>
-<div class="w3-half">
-  <b><p style="text-align: center;">Weaknesses</p></b>
-     <ul>
-  <li>Technical: adding an attachable chain to Pharo</li>
-  <li>Technical: cost of production needs to be reduced</li>
-  <li>Technical: Potential installation issues</li>
-</ul>
-</div>
-</div>
-
-<div class="w3-row-padding">
-<div class="w3-half">
-<b><p style="text-align: center;">Opportunities</p></b>
-     <ul>
-  <li>Bike theft is very prevalent in certain cities worldwide (Copenhagen, Amsterdam)</li>
-  <li>Targeted marketing in large cities and college campuses</li>
-  <li>Wireless tracking of bike (GPS and theft alert)</li>
-  <li>Connecting the bikes to smart phones</li>
-</ul>
-</div>
-<div class="w3-half">
-<b><p style="text-align: center;">Threats</p></b>
-     <ul>
-  <li>Business: Customers won’t switch bike locks; must sell at point of purchase of bike</li>
-  <li>Obtaining market share</li>
-</ul>
-</div>
-    </div>
-    
-</div>
-</div>
-
-
 
 <!-- About Us -->
 <div class="w3-row-padding" style="padding:20px 16px" id="pricing">
@@ -325,6 +135,52 @@ tr:nth-child(even) {
 </div>
 </div>
 
+
+<div class="w3-container w3-center" style="background-color: #0d9191; padding: 3%; color: white;" id="team">
+<h2><b>OUR TEAM</b></h2>
+<p>Meet the team:</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-third">
+  <img src="../static/Alan.jpg" alt="Alan Yessenbayev: Systems Engineer" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Alan Yessenbayev</h3>
+  <p>Systems Engineer</p>
+</div>
+
+
+<div class="w3-third">
+  <img src="../static/Alex.jpg" alt="Alexandra Hernandez: Designer and App Developer" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Alexandra Hernandez</h3>
+  <p>Designer and App Developer</p>
+</div>
+
+<div class="w3-third">
+  <img src="../static/Jerry.jpg" alt="Jerry Yihui Yang: Hardware and Mechanical Engineer" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Jerry Yihui Yang</h3>
+  <p>Hardware and Mechanical Engineer</p>
+</div>
+
+</div>
+<div class="w3-row"><br>
+
+<div class="w3-half">
+  <img src="../static/Justin.jpg" alt="Justin Tran: Website and Server Developer" style="width:35%" class="w3-circle w3-hover-opacity">
+  <h3>Justin Tran</h3>
+  <p>Website and Server Developer</p>
+</div>
+
+<div class="w3-half">
+  <img src="../static/Ahnaf.jpg" alt="Ahnaf Ahmed: Product Manager" style="width:35%" class="w3-circle w3-hover-opacity">
+  <h3>Ahnaf Ahmed</h3>
+  <p>Product Engineer</p>
+</div>
+
+</div>
+</div>
+
+
+
 <!-- Contact Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
   <h3 class="w3-center">Subscribe to our Newsletter</h3>
@@ -347,21 +203,22 @@ tr:nth-child(even) {
 
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <h4>Follow Us</h4>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-  <p>Powered by PHARO Inc.</p>
+<footer class="w3-container w3-padding-32 w3-center" style="background-color: #0d9191;"">
+  <h4 style="color: white;">Follow Us</h4>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-white w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p style="color: white;">Powered by PHARO Inc.</p>
 
-  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+  <div style="position:relative;bottom:100px;z-index:1; background-color: white;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-white w3-hide-small" style="background-color: white;">Go To Top</span>
     <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
+
 <script type="text/javascript" src="../static/index.js"></script>
 
 

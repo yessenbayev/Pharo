@@ -39,9 +39,9 @@ $(document).ready(function(){
             $(this).val(1);
             $('.w3-card').css('height',420);
             $('.mission').css('height',250);
-
             $('*').each(function(){
-            $(this).css('font-size',16);  
+            // var size=parseInt($(this).css('font-size'));
+            $(this).css('font-size', 16);  
             });
         }
         else{
@@ -49,7 +49,8 @@ $(document).ready(function(){
             $('.w3-card').css('height',550);
              $('.mission').css('height',350);
             $('*').each(function(){ 
-            $(this).css('font-size',20);  
+            // var size=parseInt($(this).css('font-size'));
+            $(this).css('font-size', 20);  
         }); 
            
      }
@@ -71,6 +72,18 @@ $(document).ready(function(){
      }
      }); 
 
+
+  $("#Submit").click(function(){
+        var name = $('#Name').val();
+        var email = $('#Email').val();
+        $.post("/postmethod", {
+             jsName: name,
+             jsEmail: email
+             },function(){
+                 alert("Success: Your name is: "+name+ " and your email is " + email); 
+         });
+    });
+});
        // $('*').each(function(){
        // var k =  parseInt($(this).css('font-size')); 
        // var redSize = ((k*110)/100) ; //here, you can give the percentage( now it is reduced to 90%)

@@ -109,6 +109,10 @@ def get_post_javascript_data():
 def index():
     return render_template('extend.html')
 
+@app.route("/CompetitiveAdvantage/")
+def stuff():
+    return render_template('CompetitiveAdvantage.html')
+
 
 
 # @app.route('/signup', methods=['GET','POST']) #to differentiate between the two commands
