@@ -73,7 +73,7 @@ $(document).ready(function(){
      });
 
 
-  $("#Submit").click(function(){
+  $("#ContactForm").submit(function(){
         var name = $('#Name').val();
         var email = $('#Email').val();
 
