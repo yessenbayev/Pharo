@@ -50,7 +50,7 @@ $(document).ready(function(){
              $('.mission').css('height',350);
             $('*').each(function(){
             // var size=parseInt($(this).css('font-size'));
-            $(this).css('font-size', 19);
+            $(this).css('font-size', 20);
         });
 
      }
@@ -82,7 +82,7 @@ $(document).ready(function(){
              jsEmail: email,
              function(){
                return 0;
-             };
+             }
              });
 
         loadUrl("/thankyou");

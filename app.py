@@ -109,7 +109,7 @@ def get_post_javascript_data():
 
 @app.route('/thankyou')
 def thankyou():
-    return render_template('Thankyou.html')
+    return render_template('thankyou.html')
 
 @app.route("/")
 def index():

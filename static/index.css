@@ -1,11 +1,15 @@
-
+.bottom-left {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
 
 body{
     background-color: white;
 
 }
 
-#SWOT{
+.SWOT{
     background-color: #0d9191; 
     width: 80%;
     

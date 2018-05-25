@@ -14,7 +14,7 @@ $(document).ready(function(){
             $('.w3-card').css('height',550);
              $('.mission').css('height',350);
             $('*').each(function(){ 
-            $(this).css('font-size', 19);  
+            $(this).css('font-size', 20);  
         }); 
            
      }
