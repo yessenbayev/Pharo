@@ -2,7 +2,7 @@ function pop(){
     var modal = document.getElementById('myModal');
     document.getElementById('hello').innerHTML="The Pharo is a for profit organization that serves B2C bikers who need high-protection, gps tracking and unlocking mechanism via smart devices. We will generate revenue using direct sales model.";
     modal.style.display = "block";
-    }   
+    }
 
 
 var span = document.getElementsByClassName("close")[0];
@@ -28,7 +28,7 @@ function openNav() {
     var x = document.getElementById("navDemo");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else { 
+    } else {
         x.className = x.className.replace(" w3-show", "");
     }
 }
@@ -41,20 +41,20 @@ $(document).ready(function(){
             $('.mission').css('height',250);
             $('*').each(function(){
             // var size=parseInt($(this).css('font-size'));
-            $(this).css('font-size', 16);  
+            $(this).css('font-size', 16);
             });
         }
         else{
             $(this).val(0);
             $('.w3-card').css('height',550);
              $('.mission').css('height',350);
-            $('*').each(function(){ 
+            $('*').each(function(){
             // var size=parseInt($(this).css('font-size'));
-            $(this).css('font-size', 19);  
-        }); 
-           
+            $(this).css('font-size', 19);
+        });
+
      }
-     }); 
+     });
 
   $('#inverter').click(function(){
         var number = $(this).val();
@@ -67,10 +67,10 @@ $(document).ready(function(){
             $(this).val(1);
             $('body').css('background-color','white');
             $('body').css('filter','invert(0%)');
-    
-           
+
+
      }
-     }); 
+     });
 
 
   $("#Submit").click(function(){
@@ -79,23 +79,25 @@ $(document).ready(function(){
 
         $.post("/postmethod", {
              jsName: name,
-             jsEmail: email
-             },
+             jsEmail: email,
              function(){
-                 return 0; 
-         });
+               return 0;
+             };
+             });
+
+        loadUrl("/thankyou");
 
     });
 
        // $('*').each(function(){
-       // var k =  parseInt($(this).css('font-size')); 
+       // var k =  parseInt($(this).css('font-size'));
        // var redSize = ((k*110)/100) ; //here, you can give the percentage( now it is reduced to 90%)
-       //     $(this).css('font-size',redSize);  
+       //     $(this).css('font-size',redSize);
 
        // });
        // $(#w3-card).(function(){
        //       $(this).css('min-height',800);
-       // }); 
+       // });
 
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -113,11 +115,10 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   });
   });
-
