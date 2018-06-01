@@ -1,3 +1,13 @@
+@media screen and (max-width: 320px){
+  table{
+    width: 80%; 
+  }
+}
+
+
+
+
+
 .bottom-left {
     position: absolute;
     bottom: 50px;
@@ -8,6 +18,38 @@ body{
     background-color: white;
 
 }
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 3%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+th {
+    border: 0.8px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+    font-size: 20px; 
+}
+
+
+td {
+    border: 0.8px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+
 
 .SWOT{
     background-color: #0d9191; 
