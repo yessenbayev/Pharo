@@ -1,6 +1,6 @@
-@media only screen and (max-width: 480px) {
+@media only screen {
     /* horizontal scrollbar for tables if mobile screen */
-    .tablemobile {
+    table {
         overflow-x: auto;
         display: block;
     }
