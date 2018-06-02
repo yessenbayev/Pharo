@@ -7,8 +7,9 @@ and (max-device-width : 480px) {
     padding: 3%;
     margin-right: auto;
     margin-left: 10%;
-    table-layout: auto;
+    table-layout: fixed;
  }
+
 }
 
 
@@ -33,7 +34,7 @@ table {
     padding: 3%;
     margin-right: auto;
     margin-left: auto;
-    table-layout: auto;
+    table-layout: fixed;
 
 }
 th {
