@@ -1,3 +1,18 @@
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+ table {
+    border-collapse: collapse;
+    width: 80%;
+    padding: 3%;
+    margin-right: auto;
+    margin-left: 10%;
+    table-layout: auto;
+ }
+}
+
+
+
 
 .bottom-left {
     position: absolute;
