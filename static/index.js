@@ -37,8 +37,8 @@ $(document).ready(function(){
         var number = $(this).val();
         if (number==0){
             $(this).val(1);
-            $('.w3-card').css('height',420);
-            $('.mission').css('height',250);
+            //$('.w3-card').css('height',420);
+            //$('.mission').css('height',250);
             $('*').each(function(){
             // var size=parseInt($(this).css('font-size'));
             $(this).css('font-size', 16);
@@ -46,8 +46,8 @@ $(document).ready(function(){
         }
         else{
             $(this).val(0);
-            $('.w3-card').css('height',550);
-             $('.mission').css('height',350);
+            //$('.w3-card').css('height',550);
+             //$('.mission').css('height',350);
             $('*').each(function(){
             // var size=parseInt($(this).css('font-size'));
             $(this).css('font-size', 20);
