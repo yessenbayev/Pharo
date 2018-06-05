@@ -1,11 +1,24 @@
-
+.w3-container{
+  height: 100%;
+  
+}
 .flex-container{
 display: flex;
 flex:1;
-
+flex-wrap: wrap; 
 
 }
+@media screen and (max-width: 200px;) {
+  .flex-container {
+    flex:-1;
+  }
+}
 
+
+
+li{
+  padding: 2%; 
+}
 
 .bottom-left {
     position: absolute;
@@ -15,7 +28,7 @@ flex:1;
 
 body{
     background-color: white;
-
+    font-size: 100%;  
 }
 
 
