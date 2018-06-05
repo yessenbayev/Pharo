@@ -8,11 +8,6 @@ flex:1;
 flex-wrap: wrap; 
 
 }
-@media screen and (max-width: 200px;) {
-  .flex-container {
-    flex:-1;
-  }
-}
 
 
 
