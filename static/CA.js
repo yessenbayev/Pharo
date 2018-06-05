@@ -28,13 +28,13 @@ $(document).ready(function(){
         if (number==0){
             $(this).val(1);
             $('body').each(function(){
-            $(this).css('font-size', "100%");
+            $(this).css('font-size', "1.3vw");
             });
         }
         else{
             $(this).val(0);
             $('body').each(function(){
-            $(this).css('font-size', "120%");
+            $(this).css('font-size', "1.5vw");
 
         });
 
