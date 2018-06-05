@@ -33,6 +33,7 @@ $(document).ready(function(){
         }
         else{
             $(this).val(0);
+
             $('body').each(function(){
             $(this).css('font-size', "1.5vw");
 

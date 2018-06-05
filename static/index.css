@@ -5,11 +5,16 @@
 .flex-container{
 display: flex;
 flex:1;
-flex-wrap: wrap; 
+flex-wrap: nowrap;
 
 }
 
-
+@media only screen and (max-width: 600px) {
+    .flex-container{
+      flex-wrap: wrap;
+    }
+    }
+}
 
 li{
   padding: 2%; 
@@ -20,13 +25,27 @@ li{
     bottom: 50px;
     left: 50px;
 }
+h1{
+  font-size: 4vw; 
+}
+
+h2{
+  font-size: 3vw; 
+}
+h3{
+  font-size: 2vw; 
+}
+th{
+  font-size: 2vw;
+}
+td{
+  font-size: 1.2vw; 
+}
 
 body{
     background-color: white;
-    font-size: 1.3vw; 
-
+    font-size: 1.2vw; 
 }
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -43,7 +62,7 @@ th {
     border: 0.8px solid #dddddd;
     text-align: left;
     padding: 5px;
-    font-size: 20px; 
+     
 }
 
 

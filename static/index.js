@@ -37,13 +37,13 @@ $(document).ready(function(){
         var number = $(this).val();
         if (number==0){
             $(this).val(1);
-            $('body').each(function(){
+            $('*').each(function(){
             $(this).css('font-size', "1.3vw");
             });
         }
         else{
             $(this).val(0);
-            $('body').each(function(){
+            $('*').each(function(){
             $(this).css('font-size', "1.5vw");
         });
 
