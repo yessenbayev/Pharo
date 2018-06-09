@@ -37,12 +37,14 @@ $(document).ready(function(){
         var number = $(this).val();
         if (number==0){
             $(this).val(1);
+             $(".features").css('height', 50+"%");
             $('*').each(function(){
-            $(this).css('font-size', "1.3vw");
+            $(this).css('font-size', "1.2vw");
             });
         }
         else{
             $(this).val(0);
+            $(".features").css('height', 35+"%");
             $('*').each(function(){
             $(this).css('font-size', "1.5vw");
         });
