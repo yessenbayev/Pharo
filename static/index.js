@@ -37,7 +37,7 @@ $(document).ready(function(){
         var number = $(this).val();
         if (number==0){
             $(this).val(1);
-             $(".features").css('height', 50+"%");
+             $(".features").css('height', 40+"%");
             $('*').each(function(){
             $(this).css('font-size', "1.2vw");
             });
