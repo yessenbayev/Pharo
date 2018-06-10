@@ -1,0 +1,154 @@
+{% extends "index.html" %}
+
+    {% block body %}
+
+
+<div class="w3-row-padding" style="padding:20px 16px; width: 80%; margin-right: auto;
+    margin-left: auto; background-color: white;" id="CA">
+    
+<h2 class="w3-center"  style="padding:20px 16px;"><b>Competitive Analysis</b></h2>
+
+<table>
+  <tr>
+    <th>Factors</th>
+    <th>Pharo</th>
+    <th>Linka</th>
+    <th>U-Lock</th>
+    <th>Chain Lock</th>
+  </tr>
+  <tr>
+    <td><b>Security</b></td>
+    <td>High</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <td><b>Convenience</b></td>
+    <td>High</td>
+    <td>High</td>
+    <td>Low</td>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <td><b>Autonomous</b> </td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><b> Price</b></td>
+    <td>$70</td>
+    <td>$200</td>
+    <td>$50</td>
+    <td>$30</td>
+  </tr>
+  <tr>
+    <td><b>Phone App</b></td>
+    <td>IOS and Android</td>
+    <td>IOS and Android</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><b>GPS Tracking</b></td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+    <tr>
+    <td><b>Alarm</b></td>
+    <td>Sounds/Lights</td>
+    <td>Sounds</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+      <tr>
+    <td><b>Transportation</b></td>
+    <td>Attached</td>
+    <td>Attached</td>
+    <td>Carried with</td>
+    <td>Carried with</td>
+  </tr>
+      <tr>
+    <td><b>Length</b></td>
+    <td>Long</td>
+    <td>N/A</td>
+    <td>Short</td>
+    <td>Medium</td>
+  </tr>
+      <tr>
+    <td><b>Weight</b></td>
+    <td>Light</td>
+    <td>Light</td>
+    <td>Heavy</td>
+    <td>Heavy</td>
+  </tr>
+</table>
+<br>
+<hr>
+<div class="SWOT">
+<div class="w3-row">
+<div class="w3-half">
+
+<b><p style="text-align: center;">Strengths</p></b>
+<ul>
+  <li>The best combination of security, convenience and price</li>
+  <li>Autonomous locking and unlocking mechanism</li>
+  <li>Theft Security
+    <ul>
+    <li>Mobile notification of potential threat</li>
+    <li>GPS tracking when bike moves</li>
+    <li>Sound alarm and flashing lights on bike</li>
+    </ul>
+  </li>
+  </ul>
+</div>
+<div class="w3-half">
+  <b><p style="text-align: center;">Weaknesses</p></b>
+     <ul>
+  <li>Technical: adding an attachable chain to Pharo</li>
+  <li>Technical: cost of production needs to be reduced</li>
+  <li>Technical: Potential installation issues</li>
+</ul>
+</div>
+</div>
+
+<div class="w3-row-padding">
+<div class="w3-half">
+<b><p style="text-align: center;">Opportunities</p></b>
+     <ul>
+  <li>Bike theft is very prevalent in certain cities worldwide (Copenhagen, Amsterdam)</li>
+  <li>Targeted marketing in large cities and college campuses</li>
+  <li>Wireless tracking of bike (GPS and theft alert)</li>
+  <li>Connecting the bikes to smart phones</li>
+</ul>
+</div>
+<div class="w3-half">
+<b><p style="text-align: center;">Threats</p></b>
+     <ul>
+  <li>Business: Customers won’t switch bike locks; must sell at point of purchase of bike</li>
+  <li>Obtaining market share</li>
+</ul>
+</div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+<footer class="w3-container w3-padding-32 w3-center" style="background-color: #0d9191;"">
+  <h4 style="color: white;">Follow Us</h4>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-white" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-white w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p style="color: white;">Powered by PHARO Inc.</p>
+
+<script type="text/javascript" src="../static/CA.js"></script>
+
+
+    {% endblock %}

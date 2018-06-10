@@ -1,0 +1,358 @@
+//
+//  ViewController.swift
+//  FINAL_PHARO_APP
+//
+//  Created by Alexandra Hernandez on 5/9/18.
+//  Copyright © 2018 company. All rights reserved.
+//
+
+import UIKit
+import Foundation
+import CoreBluetooth
+
+
+
+class ViewController: UIViewController {
+    //page 1
+    @IBOutlet var Home_page: UIView!
+    @IBOutlet weak var pharo_home_pic: UIImageView!
+    @IBOutlet weak var sign_up: UIButton!
+    @IBOutlet weak var connect_fb: UIButton!
+    @IBOutlet weak var login: UIButton!
+    
+    
+    
+    //welcome page
+    @IBOutlet weak var Welcome_page: UIView!
+    @IBOutlet weak var Welcome_text: UITextField!
+    @IBOutlet weak var Find: UIButton!
+    @IBOutlet weak var Lock: UIButton!
+    @IBOutlet weak var alarm: UIButton!
+    
+    
+    //lock page
+    @IBOutlet weak var lock_page: UIView!
+    @IBOutlet weak var lock_main_button: UIButton!
+    @IBOutlet weak var unlock_main_button: UIButton!
+    @IBOutlet weak var Find_bottom: UIButton!
+    @IBOutlet weak var lock_bottom: UIButton!
+    @IBOutlet weak var alarm_bottom: UIButton!
+    
+    
+    //alarm page
+    @IBOutlet weak var alarm_page: UIView!
+    @IBOutlet weak var alarm_on_button: UIButton!
+    @IBOutlet weak var alarm_off_button: UIButton!
+    @IBOutlet weak var unlcok_bottom_alarm: UIButton!
+    @IBOutlet weak var alarm_bottom_alarm: UIButton!
+    @IBOutlet weak var find_bottom_alarm: UIButton!
+    
+    
+    //find page
+    
+    @IBOutlet weak var find_page: UIView!
+    @IBOutlet weak var current_bike_loc_txt: UIButton!
+    @IBOutlet weak var lock_bottm_find: UIButton!
+    @IBOutlet weak var alarm_btm_find: UIButton!
+    @IBOutlet weak var find_btm_fin: UIButton!
+    @IBOutlet weak var location_txt: UITextField!
+    @IBOutlet weak var location_pic: UIButton!
+    
+    
+    
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    @IBAction func Click_login(_ sender: Any) {
+        //hide home page
+        //Home_page.isHidden=true  //need to keep this open since its inside!!!!
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //show welcome page
+        Welcome_page.isHidden=false
+        Welcome_text.isHidden=false
+        Find.isHidden=false
+        Lock.isHidden=false
+        alarm.isHidden=false
+    }
+
+    //click lock on welcome page
+    @IBAction func Click_lock(_ sender: Any) {
+        //hide Homepage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+         Welcome_page.isHidden=true
+    
+        //show lock page
+        lock_page.isHidden=false
+        lock_main_button.isHidden=false
+        unlock_main_button.isHidden=true
+        Find_bottom.isHidden=false
+        lock_bottom.isHidden=false
+        alarm_bottom.isHidden=false
+    }
+    
+    //click find from lock page
+    @IBAction func Click_find_fromLock(_ sender: Any) {
+        //hide hompage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+        Welcome_page.isHidden=true
+        
+        //hide lock page
+        lock_page.isHidden=true
+        
+        //hide alarm page
+        alarm_page.isHidden=true
+        
+        //show find page
+        find_page.isHidden=false
+        current_bike_loc_txt.isHidden=false
+        lock_bottm_find.isHidden=false
+        alarm_btm_find.isHidden=false
+        find_btm_fin.isHidden=false
+        location_txt.isHidden=false
+        location_pic.isHidden=false
+        
+    }
+    
+    //click alarm from lock page
+    @IBAction func click_alarm_fromLock(_ sender: Any) {
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+        Welcome_page.isHidden=true
+        
+        //hide lock page
+        lock_page.isHidden=true
+        
+        //show alarm page
+        alarm_page.isHidden=false
+        alarm_on_button.isHidden=false
+        alarm_bottom_alarm.isHidden=false
+        unlcok_bottom_alarm.isHidden=false
+        find_bottom_alarm.isHidden=false
+    }
+    
+    //click lock on lock page
+    @IBAction func click_lock(_ sender: Any) {
+    
+    //hide hompage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+         Welcome_page.isHidden=true
+        
+        //show unlock
+        lock_page.isHidden=false
+        lock_main_button.isHidden=true
+        unlock_main_button.isHidden=false
+        Find_bottom.isHidden=false
+        lock_bottom.isHidden=false
+        alarm_bottom.isHidden=false
+    
+    }
+    
+    //click unlock on lock page
+    @IBAction func Click_unlock(_ sender: Any) {
+        //hide hompage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+        Welcome_page.isHidden=true
+        
+        //show unlock
+        lock_page.isHidden=false
+        lock_main_button.isHidden=false
+        unlock_main_button.isHidden=true
+        Find_bottom.isHidden=false
+        lock_bottom.isHidden=false
+        alarm_bottom.isHidden=false
+        
+    }
+    
+    
+    //click alarm on welcome page
+    @IBAction func click_alarm(_ sender: Any) {
+        //hide hompage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+        Welcome_page.isHidden=true
+        
+        //hide lock page
+        lock_page.isHidden=true
+        
+        //show alarm page
+        alarm_page.isHidden=false
+        alarm_on_button.isHidden=false
+        alarm_bottom_alarm.isHidden=false
+        unlcok_bottom_alarm.isHidden=false
+        find_bottom_alarm.isHidden=false
+        
+    }
+    
+    //click find from alarm page
+    @IBAction func Click_find_fromAlarm(_ sender: Any) {
+        //hide hompage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+        Welcome_page.isHidden=true
+        
+        //hide lock page
+        lock_page.isHidden=true
+        
+        //hide alarm page
+        alarm_page.isHidden=true
+        
+        //show find page
+        find_page.isHidden=false
+        current_bike_loc_txt.isHidden=false
+        lock_bottm_find.isHidden=false
+        alarm_btm_find.isHidden=false
+        find_btm_fin.isHidden=false
+        location_txt.isHidden=false
+        location_pic.isHidden=false
+        
+    }
+    
+    //click lock from alarm page
+    @IBAction func Click_lock_fromAlarm(_ sender: Any) {
+        //hide Homepage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+        Welcome_page.isHidden=true
+        
+        //show lock page
+        lock_page.isHidden=false
+        lock_main_button.isHidden=false
+        unlock_main_button.isHidden=true
+        Find_bottom.isHidden=false
+        lock_bottom.isHidden=false
+        alarm_bottom.isHidden=false
+    
+    }
+    
+    
+    
+ 
+    
+    
+    //click find on welcome page
+    @IBAction func Click_find(_ sender: Any) {
+        //hide hompage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+        Welcome_page.isHidden=true
+        
+        //hide lock page
+        lock_page.isHidden=true
+        
+        //hide alarm page
+        alarm_page.isHidden=true
+        
+        //show find page
+        find_page.isHidden=false
+        current_bike_loc_txt.isHidden=false
+        lock_bottm_find.isHidden=false
+        alarm_btm_find.isHidden=false
+        find_btm_fin.isHidden=false
+        location_txt.isHidden=false
+        location_pic.isHidden=false
+        
+    }
+    
+    
+    
+    
+    //click alarm from find page
+    @IBAction func click_alarm_fromFind(_ sender: Any) {
+        //hide hompage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+        Welcome_page.isHidden=true
+        
+        //hide lock page
+        lock_page.isHidden=true
+        
+        //show alarm page
+        alarm_page.isHidden=false
+        alarm_on_button.isHidden=false
+        alarm_bottom_alarm.isHidden=false
+        unlcok_bottom_alarm.isHidden=false
+        find_bottom_alarm.isHidden=false
+    }
+    
+    
+    //click lock from find page
+    @IBAction func click_lock_fromFind(_ sender: Any) {
+        //hide Homepage
+        pharo_home_pic.isHidden=true
+        sign_up.isHidden=true
+        connect_fb.isHidden=true
+        login.isHidden=true
+        
+        //hide welcome page
+        Welcome_page.isHidden=true
+        
+        //show lock page
+        lock_page.isHidden=false
+        lock_main_button.isHidden=false
+        unlock_main_button.isHidden=true
+        Find_bottom.isHidden=false
+        lock_bottom.isHidden=false
+        alarm_bottom.isHidden=false
+    }
+    
+    
+    
+    
+    
+
+
+}
