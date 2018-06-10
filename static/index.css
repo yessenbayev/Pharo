@@ -222,8 +222,8 @@ input:checked + .slider:before {
     #Justin{width: 45%;}
     #Ahnaf{width: 45%;}
     .pop{width:100%; display: inline; white-space: normal;} 
-    th{font-size: 2vw;}
-    td{font-size: 1.2vw;}
+    th{font-size: 3vw;}
+    td{font-size: 2vw;}
     p{font-size: 1.2rem;}
     h1{font-size: 4rem;}
     h2{font-size: 3rem;}
