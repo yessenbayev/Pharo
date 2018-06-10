@@ -217,7 +217,7 @@ input:checked + .slider:before {
 
 
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 600px){
     .flex-container{flex-wrap: wrap;}  
     #Justin{width: 45%;}
     #Ahnaf{width: 45%;}
