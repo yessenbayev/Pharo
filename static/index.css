@@ -9,6 +9,8 @@ flex-wrap: nowrap;
 
 }
 
+
+
 li{
   padding: 2%; 
 }
@@ -69,8 +71,12 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+.pop{
 
-
+}
+.picture{
+  width: 35%; 
+}
 
 
 .SWOT{
