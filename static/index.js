@@ -65,6 +65,48 @@ $(document).ready(function(){
      
      });
 
+
+
+ $('#tiggle').click(function(){
+        var number = $(this).val();
+        if (number==0){
+            $(this).val(1);
+          $(".features").css('height', 40+"%");
+          $('h1').css('font-size', 4+"rem");
+          $('h2').css('font-size', 3+"rem");
+          $('h3').css('font-size', 2+"rem");
+          $('th').css('font-size', 2+"rem");
+           $('th').css('font-size', 1.2+"rem");
+            $('body').css('font-size', 1.2+"rem");
+
+            // $('body').each(function(){
+            // $(this).css('font-size', 1.2+"vw");
+            
+        }
+        else{
+            $(this).val(0);
+            $(".features").css('height', 35+"%");
+            $('h1').css('font-size', 4.2+"rem");
+          $('h2').css('font-size', 3.2+"rem");
+          $('h3').css('font-size', 2.2+"rem");
+          $('th').css('font-size', 2.2+"rem");
+           $('th').css('font-size', 1.4+"rem");
+            $('body').css('font-size', 1.4+"rem");
+            // $('body').each(function(){
+            // $(this).css('font-size', 1.4+"vw;");
+        }//);
+
+     
+     });
+
+
+
+
+
+
+
+
+
   $('#inverter').click(function(){
         var number = $(this).val();
         if (number==1){
