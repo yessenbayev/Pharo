@@ -230,4 +230,5 @@ input:checked + .slider:before {
     h3{font-size: 2rem;}
     body{font-size: 1.2rem;}
     .threeamigo{height: auto;}
+    .SWOT{width: 100%;}
 }
