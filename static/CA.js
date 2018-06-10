@@ -64,7 +64,7 @@ $(document).ready(function(){
           $('h2').css('font-size', 3+"rem");
           $('h3').css('font-size', 2+"rem");
           $('th').css('font-size', 3+"vw");
-           $('td').css('font-size', 2+"vw");
+           $('td').css('font-size', 1.5+"vw");
             $('p').css('font-size', 1.2+"rem");
 
             // $('body').each(function(){
@@ -78,7 +78,7 @@ $(document).ready(function(){
           $('h2').css('font-size', 3.2+"rem");
           $('h3').css('font-size', 2.2+"rem");
           $('th').css('font-size', 3.2+"vw");
-           $('td').css('font-size', 2.2+"vw");
+           $('td').css('font-size', 1.7+"vw");
             $('p').css('font-size', 1.4+"rem");
             // $('body').each(function(){
             // $(this).css('font-size', 1.4+"vw;");
