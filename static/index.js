@@ -37,19 +37,32 @@ $(document).ready(function(){
         var number = $(this).val();
         if (number==0){
             $(this).val(1);
-             $(".features").css('height', 40+"%");
-            $('*').each(function(){
-            $(this).css('font-size', "1.2vw");
-            });
+          $(".features").css('height', 40+"%");
+          $('h1').css('font-size', 4+"vw");
+          $('h2').css('font-size', 3+"vw");
+          $('h3').css('font-size', 2+"vw");
+          $('th').css('font-size', 2+"vw");
+           $('th').css('font-size', 1.2+"vw");
+            $('body').css('font-size', 1.2+"vw");
+
+            // $('body').each(function(){
+            // $(this).css('font-size', 1.2+"vw");
+            
         }
         else{
             $(this).val(0);
             $(".features").css('height', 35+"%");
-            $('*').each(function(){
-            $(this).css('font-size', "1.5vw");
-        });
+             $('h1').css('font-size', 4.2+"vw");
+          $('h2').css('font-size', 3.2+"vw");
+          $('h3').css('font-size', 2.2+"vw");
+          $('th').css('font-size', 2.2+"vw");
+           $('th').css('font-size', 1.4+"vw");
+            $('body').css('font-size', 1.4+"vw");
+            // $('body').each(function(){
+            // $(this).css('font-size', 1.4+"vw;");
+        }//);
 
-     }
+     
      });
 
   $('#inverter').click(function(){

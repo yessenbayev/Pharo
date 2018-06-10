@@ -23,7 +23,6 @@ function openNav() {
 
 $(document).ready(function(){
     $('#toggle').click(function(){
-
         var number = $(this).val();
         if (number==0){
             $(this).val(1);
