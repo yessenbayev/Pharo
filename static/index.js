@@ -43,7 +43,7 @@ $(document).ready(function(){
           $('h3').css('font-size', 2+"vw");
           $('th').css('font-size', 2+"vw");
            $('th').css('font-size', 1.2+"vw");
-            $('body').css('font-size', 1.2+"vw");
+            $('p').css('font-size', 1.2+"vw");
 
             // $('body').each(function(){
             // $(this).css('font-size', 1.2+"vw");
@@ -57,7 +57,7 @@ $(document).ready(function(){
           $('h3').css('font-size', 2.2+"vw");
           $('th').css('font-size', 2.2+"vw");
            $('th').css('font-size', 1.4+"vw");
-            $('body').css('font-size', 1.4+"vw");
+            $('p').css('font-size', 1.4+"vw");
             // $('body').each(function(){
             // $(this).css('font-size', 1.4+"vw;");
         }//);
@@ -77,7 +77,7 @@ $(document).ready(function(){
           $('h3').css('font-size', 2+"rem");
           $('th').css('font-size', 2+"rem");
            $('th').css('font-size', 1.2+"rem");
-            $('body').css('font-size', 1.2+"rem");
+            $('p').css('font-size', 1.2+"rem");
 
             // $('body').each(function(){
             // $(this).css('font-size', 1.2+"vw");
@@ -89,9 +89,9 @@ $(document).ready(function(){
             $('h1').css('font-size', 4.2+"rem");
           $('h2').css('font-size', 3.2+"rem");
           $('h3').css('font-size', 2.2+"rem");
-          $('th').css('font-size', 2.2+"rem");
-           $('th').css('font-size', 1.4+"rem");
-            $('body').css('font-size', 1.4+"rem");
+          $('th').css('font-size', 2.2+"vw");
+           $('th').css('font-size', 1.4+"vw");
+            $('p').css('font-size', 1.4+"rem");
             // $('body').each(function(){
             // $(this).css('font-size', 1.4+"vw;");
         }//);
@@ -108,6 +108,21 @@ $(document).ready(function(){
 
 
   $('#inverter').click(function(){
+        var number = $(this).val();
+        if (number==1){
+            $(this).val(0);
+            $('body').css('background-color','black');
+            $('body').css('filter','invert(100%)');
+        }
+        else{
+            $(this).val(1);
+            $('body').css('background-color','white');
+            $('body').css('filter','invert(0%)');
+
+
+     }
+     });
+  $('#inverters').click(function(){
         var number = $(this).val();
         if (number==1){
             $(this).val(0);
