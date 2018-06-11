@@ -104,7 +104,7 @@ def get_post_javascript_data():
     msg = Message("Welcome to Pharo", body=bd, sender="pharo.ucsd@gmail.com", recipients=[email])
     mail.send(msg)
     # return redirect(url_for('thankyou'))
-    return  render_template('thankyou.html')
+    #return render_template('thankyou.html')
 
 @app.route('/thankyou/')
 def thankyou():
