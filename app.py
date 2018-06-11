@@ -23,7 +23,7 @@ app.config.update(
     MAIL_USERNAME = 'pharo.ucsd@gmail.com',
     MAIL_PASSWORD = 'ece140pharo'
     )
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pharo'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pharo'
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 mail = Mail(app)
