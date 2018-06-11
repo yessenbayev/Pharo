@@ -1,10 +1,10 @@
 import os
 from flask import Flask, render_template, g, request, redirect, jsonify
-# from flask_sqlalchemy import SQLAlchemy
-# from flask_heroku import Heroku
-# from flask_mail import Mail
-# from flask_mail import Message
-# import smtplib
+from flask_sqlalchemy import SQLAlchemy
+from flask_heroku import Heroku
+from flask_mail import Mail
+from flask_mail import Message
+import smtplib
 
 # def dict_factory(cursor, row):
 #     d = {}
@@ -14,29 +14,29 @@ from flask import Flask, render_template, g, request, redirect, jsonify
 
 ##### APP SETUP #####
 app = Flask(__name__)
-# app.config.update(
-#     DEBUG=True,
-#     #EMAIL SETTINGS
-#     MAIL_SERVER='smtp.gmail.com',
-#     MAIL_PORT=465,
-#     MAIL_USE_SSL=True,
-#     MAIL_USERNAME = 'pharo.ucsd@gmail.com',
-#     MAIL_PASSWORD = 'ece140pharo'
-#     )
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pharo'
-# heroku = Heroku(app)
-# db = SQLAlchemy(app)
-# mail = Mail(app)
-# # ##### DB SETUP #####
+app.config.update(
+    DEBUG=True,
+    #EMAIL SETTINGS
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT=465,
+    MAIL_USE_SSL=True,
+    MAIL_USERNAME = 'pharo.ucsd@gmail.com',
+    MAIL_PASSWORD = 'ece140pharo'
+    )
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pharo'
+heroku = Heroku(app)
+db = SQLAlchemy(app)
+mail = Mail(app)
+# ##### DB SETUP #####
 
-# class Emails(db.Model):
-# 	id = db.Column(db.Integer, primary_key=True)
-# 	name = db.Column(db.String(120),unique=False)
-# 	email = db.Column(db.String(120),unique=True)
+class Emails(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	name = db.Column(db.String(120),unique=False)
+	email = db.Column(db.String(120),unique=True)
 
-# 	def __init__(self, name, email):
-#             self.name = name
-#             self.email = email
+	def __init__(self, name, email):
+            self.name = name
+            self.email = email
 
 # # Setup the database credentials
 # app.config.update(dict(
@@ -104,7 +104,6 @@ def get_post_javascript_data():
     msg = Message("Welcome to Pharo", body=bd, sender="pharo.ucsd@gmail.com", recipients=[email])
     mail.send(msg)
     return redirect(url_for('thanks'))
-    #return render_template('thankyou.html')
 
 
 @app.route("/thanks/")
