@@ -1,16 +1,3 @@
-function pop(){
-    var modal = document.getElementById('myModal');
-    document.getElementById('hello').innerHTML="The Pharo is a for profit organization that serves B2C bikers who need high-protection, gps tracking and unlocking mechanism via smart devices. We will generate revenue using direct sales model.";
-    modal.style.display = "block";
-    }
-
-
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = "none";
-  }
-// Script for side navigation
 function w3_open() {
     var x = document.getElementById("mySidebar");
     x.style.width = "300px";
@@ -32,6 +19,8 @@ function openNav() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+
 $(document).ready(function(){
     $('#toggle').click(function(){
         var number = $(this).val();
@@ -64,7 +53,6 @@ $(document).ready(function(){
 
      
      });
-
 
 
  $('#tiggle').click(function(){
@@ -101,12 +89,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
   $('#inverter').click(function(){
         var number = $(this).val();
         if (number==1){
@@ -118,11 +100,11 @@ $(document).ready(function(){
             $(this).val(1);
             $('body').css('background-color','white');
             $('body').css('filter','invert(0%)');
-
-
+    
+           
      }
      });
-  $('#inverters').click(function(){
+$('#inverters').click(function(){
         var number = $(this).val();
         if (number==1){
             $(this).val(0);
@@ -133,58 +115,9 @@ $(document).ready(function(){
             $(this).val(1);
             $('body').css('background-color','white');
             $('body').css('filter','invert(0%)');
-
-
+    
+           
      }
-     });
+     }); 
 
-
-  $("#ContactForm").submit(function(){
-        var name = $('#Name').val();
-        var email = $('#Email').val();
-
-        $.post("/postmethod", {
-             jsName: name,
-             jsEmail: email,
-             function(){
-               return 0;
-             }
-             });
-
-        loadUrl("/thankyou");
-
-    });
-
-       // $('*').each(function(){
-       // var k =  parseInt($(this).css('font-size'));
-       // var redSize = ((k*110)/100) ; //here, you can give the percentage( now it is reduced to 90%)
-       //     $(this).css('font-size',redSize);
-
-       // });
-       // $(#w3-card).(function(){
-       //       $(this).css('min-height',800);
-       // });
-
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
   });
