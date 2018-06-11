@@ -96,8 +96,6 @@ class Emails(db.Model):
 def get_post_javascript_data():
     name = request.form['jsName']
     email = request.form['jsEmail']
-    print(name)
-    print(email)
     print("Sent to ",email)
     reg = Emails(name,email)
     db.session.add(reg)
