@@ -103,13 +103,13 @@ def get_post_javascript_data():
     bd = "Dear Customers,\nThank you so much for signing up for the Pharo newsletter! As we work towards finishing our product, we will be sharing updates with you.\nThank so much for your support once again!\n\nBest Regards,\nTeam Pharo"
     msg = Message("Welcome to Pharo", body=bd, sender="pharo.ucsd@gmail.com", recipients=[email])
     mail.send(msg)
-    return redirect(url_for('thankyou'))
+    return redirect(url_for('thanks'))
     #return render_template('thankyou.html')
 
 
-@app.route("/thankyou/")
+@app.route("/thanks/")
 def thanks():
-    return render_template('thankyou.html')
+    return render_template('thanks.html')
 
 @app.route("/")
 def index():
