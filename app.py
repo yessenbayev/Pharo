@@ -106,8 +106,9 @@ def get_post_javascript_data():
     return redirect(url_for('thankyou'))
     #return render_template('thankyou.html')
 
+
 @app.route("/thankyou/")
-def thankyou():
+def thanks():
     return render_template('thankyou.html')
 
 @app.route("/")
