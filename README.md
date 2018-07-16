@@ -1,5 +1,5 @@
 # Pharo Bike Lock
-This is our final undergraduate design project created as part of ECE 140A/B course sequence
+This is our final undergraduate design project created as a part of ECE 140A/B course sequence
 
 ## Contents
 * The root directory contains the web app that is running at http://pharo-140.herokuapp.com/
